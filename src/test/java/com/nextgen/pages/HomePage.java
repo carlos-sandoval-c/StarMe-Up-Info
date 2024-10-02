@@ -13,7 +13,7 @@ public class HomePage extends BasePage {
     }
 
     public void waitHomePageLoad() {
-        waitElementIsDisplayed(logoImg);
+        waitElementBeClickable(logoHomeBtn);
         waitElementBeClickable(searchInput);
     }
 }

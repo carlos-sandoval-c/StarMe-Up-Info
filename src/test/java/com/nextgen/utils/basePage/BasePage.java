@@ -18,8 +18,8 @@ public class BasePage {
     protected WebDriverWait wait;
 
     // Navbar Elements (WARN: Not Available in Landing Page)
-    @FindBy(css = ".ui-header__logo-image")
-    protected WebElement logoImg;
+    @FindBy(css = ".ui-header__logo")
+    protected WebElement logoHomeBtn;
     @FindBy(css = ".main-search__input")
     protected WebElement searchInput;
     // Exists only after of search
@@ -54,7 +54,7 @@ public class BasePage {
                 .pollingEvery(Duration.ofSeconds(2))
                 .ignoring(RuntimeException.class);
 
-        fluentWait.until(ExpectedConditions.visibilityOfAllElements(Arrays.asList(logoImg, searchInput)));
+        fluentWait.until(ExpectedConditions.visibilityOfAllElements(Arrays.asList(logoHomeBtn, searchInput)));
     }
 
     protected boolean verifyUrlContains(String txt) {
@@ -62,7 +62,7 @@ public class BasePage {
     }
 
     public boolean isLogoDisplayed() {
-        return logoImg.isDisplayed();
+        return logoHomeBtn.isDisplayed();
     }
 
     public boolean isSearchInputEnabled() {
