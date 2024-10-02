@@ -29,6 +29,8 @@ public class BasePage {
     protected WebElement resultsListTitle;
     @FindBy(css = ".main-search-list__users > .main-search-list-item")
     protected List<WebElement> userResultsList;
+    @FindBy(css = "ui-user-profile-user-avatar__avatar")
+    protected WebElement avatarImg;
 
     public BasePage(WebDriver pageDriver) {
         driver = pageDriver;

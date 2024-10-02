@@ -2,6 +2,7 @@ package com.nextgen.test;
 
 import com.nextgen.pages.HomePage;
 import com.nextgen.pages.LandingPage;
+import com.nextgen.pages.UserMainPage;
 import com.nextgen.utils.baseTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -23,6 +24,16 @@ public class SearchUsersTest extends BaseTest {
         Assert.assertTrue(landPage.isGloberNameListDisplayed());
 
         landPage.clickOnFirstUserResult();
+
+        UserMainPage userMainPage = loadProfile();
+
+        userMainPage.untilImgIsDisplayed();
+
+        Assert.assertTrue(userMainPage.isAvatarDisplayed());
+
+
+
+
 
     }
 }

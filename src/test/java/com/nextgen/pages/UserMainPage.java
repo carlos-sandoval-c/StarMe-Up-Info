@@ -7,4 +7,13 @@ public class UserMainPage extends BasePage {
     public UserMainPage(WebDriver driver) {
         super(driver);
     }
+
+    public void untilImgIsDisplayed(){
+        waitElementIsDisplayed(avatarImg);
+
+    }
+
+    public boolean isAvatarDisplayed(){
+        return avatarImg.isDisplayed();
+    }
 }
