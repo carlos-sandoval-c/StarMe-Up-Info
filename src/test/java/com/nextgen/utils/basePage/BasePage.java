@@ -68,4 +68,5 @@ public class BasePage {
     public boolean isSearchInputEnabled() {
         return searchInput.isDisplayed() && searchInput.isEnabled();
     }
+
 }

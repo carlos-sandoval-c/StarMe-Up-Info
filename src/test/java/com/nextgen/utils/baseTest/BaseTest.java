@@ -18,7 +18,7 @@ public class BaseTest {
         driverManager.goToUrl(url);
     }
 
-    private LandingPage loadFirstPage() throws NullPointerException {
+    protected LandingPage loadFirstPage() throws NullPointerException {
         if (driverManager == null || driverManager.getDriver() == null) {
             Log.error("BaseTest - LoadFirstPage: Error in the reference of the DriverManager or the WebDriver managed by it.");
             throw new NullPointerException("DriverManager is null or DriverManager.getDriver() return null");
