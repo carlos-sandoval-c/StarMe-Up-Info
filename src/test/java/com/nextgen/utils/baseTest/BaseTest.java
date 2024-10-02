@@ -5,10 +5,8 @@ import com.nextgen.pages.LandingPage;
 import com.nextgen.pages.UserMainPage;
 import com.nextgen.utils.DriverManager;
 import com.nextgen.utils.Logger.Log;
-import org.checkerframework.checker.units.qual.A;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
