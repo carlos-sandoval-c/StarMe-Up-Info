@@ -29,6 +29,10 @@ public class SearchUsersTest extends BaseTest {
 
         userMainPage.untilImgIsDisplayed();
 
+        userMainPage.untilSentStarsIsDisplayed();
+
+        userMainPage.getSentStars();
+
         Assert.assertTrue(userMainPage.isAvatarDisplayed());
 
 

@@ -13,7 +13,20 @@ public class UserMainPage extends BasePage {
 
     }
 
+    public void untilSentStarsIsDisplayed(){
+        waitElementIsDisplayed(metricSentStars);
+    }
+
     public boolean isAvatarDisplayed(){
         return avatarImg.isDisplayed();
+    }
+
+    public void getSentStars(){
+
+        System.out.println(metricSentStars.toString());
+
+        String metricValue = metricSentStars.getText();
+        System.out.println("Estrellas enviadas: " + metricValue);
+
     }
 }
