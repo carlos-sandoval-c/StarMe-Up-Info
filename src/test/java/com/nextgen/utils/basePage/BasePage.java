@@ -29,6 +29,10 @@ public class BasePage {
     protected WebElement resultsListTitle;
     @FindBy(css = ".main-search-list__users > .main-search-list-item")
     protected List<WebElement> userResultsList;
+    @FindBy(css = ".ui-user-profile-user-avatar__avatar")
+    protected WebElement avatarImg;
+    @FindBy(css = ".profile-metric-content__value")
+    protected WebElement metricSentStars;
 
     public BasePage(WebDriver pageDriver) {
         driver = pageDriver;
@@ -68,4 +72,5 @@ public class BasePage {
     public boolean isSearchInputEnabled() {
         return searchInput.isDisplayed() && searchInput.isEnabled();
     }
+
 }

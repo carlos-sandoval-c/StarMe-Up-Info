@@ -25,6 +25,7 @@ public class DriverManager {
         }
     }
 
+
     public void goToUrl(String url) {
         if (url == null || url.isEmpty()) {
             Log.warn("DriverManager - goToUrl: Null or empty string is used. Keep in page");

@@ -2,12 +2,11 @@ package com.nextgen.utils.baseTest;
 
 import com.nextgen.pages.HomePage;
 import com.nextgen.pages.LandingPage;
+import com.nextgen.pages.UserMainPage;
 import com.nextgen.utils.DriverManager;
 import com.nextgen.utils.Logger.Log;
-import org.checkerframework.checker.units.qual.A;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
@@ -18,7 +17,7 @@ public class BaseTest {
         driverManager.goToUrl(url);
     }
 
-    private LandingPage loadFirstPage() throws NullPointerException {
+    protected LandingPage loadFirstPage() throws NullPointerException {
         if (driverManager == null || driverManager.getDriver() == null) {
             Log.error("BaseTest - LoadFirstPage: Error in the reference of the DriverManager or the WebDriver managed by it.");
             throw new NullPointerException("DriverManager is null or DriverManager.getDriver() return null");
@@ -34,6 +33,15 @@ public class BaseTest {
         }
         driverManager.goToUrl("https://app.starmeup.com/home");
         return new HomePage(driverManager.getDriver());
+    }
+
+    protected UserMainPage loadProfile() throws NullPointerException {
+        if (driverManager == null || driverManager.getDriver() == null) {
+            Log.error("BaseTest - LoadFirstPage: Error in the reference of the DriverManager or the WebDriver managed by it.");
+            throw new NullPointerException("DriverManager is null or DriverManager.getDriver() return null");
+        }
+
+        return new UserMainPage(driverManager.getDriver());
     }
 
     @BeforeSuite
